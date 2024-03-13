@@ -1,0 +1,117 @@
+/* Swipe Hello Text */
+@keyframes swipe {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        /* Start and end positions: no translation */
+    }
+
+    50% {
+        transform: translateX(100%);
+        /* Middle position: translate right */
+    }
+}
+
+/* Apply the animation to the .top-hello-txt element */
+.top-hello-txt {
+    display: inline-block;
+    /* Make sure the animation works */
+    animation: swipe 4s linear infinite;
+    /* Apply swipe animation with a duration of 4 seconds */
+}
+
+/* Additional styling (adjust as needed) */
+.flex {
+    display: flex;
+}
+
+/* Animation for waving hand emoji */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Class for the waving hand emoji */
+.waving-hand {
+    display: inline-block;
+    animation: wave 2s infinite;
+}
+
+.hero-para {
+    visibility: hidden;
+    /* Initially hide the text */
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation for blinking cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+        /* Make the border color transparent for blinking effect */
+    }
+}
+
+/* Apply typing and blinking animations to .hero-para with the typing class */
+.hero-para.typing {
+    visibility: visible;
+    /* Make the text visible */
+    animation: typing 4s steps(40) forwards, blink 1s infinite;
+    /* Apply the typing animation with a duration of 4 seconds, steps(40), and forwards fill mode, and apply the blink animation with a duration of 1 second and infinite repeat */
+    white-space: nowrap;
+    /* Prevent wrapping of text */
+    overflow: hidden;
+    /* Hide overflow */
+    border-right: 3px solid;
+    /* Add a border to simulate the typing cursor */
+}
+
+/* Class for animated border */
+.afBorder {
+    border-bottom: 3px solid transparent;
+    /* Initially set the border color transparent */
+    animation: blinkBorder 1s infinite;
+    /* Apply the 'blinkBorder' animation with a duration of 1 second and infinite repeat */
+}
+
+/* Animation for blinking border */
+@keyframes blinkBorder {
+
+    0%,
+    50% {
+        border-color: transparent;
+        /* Make the border color transparent for blinking effect */
+    }
+
+    100% {
+        border-color: var(--black);
+        /* Set the border color to black */
+    }
+}

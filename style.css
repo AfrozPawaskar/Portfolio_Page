@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+/* Dark Mode */
+
+#dark-mode {
+    width: 24px;
+    cursor: pointer;
+    color: var(--black);
+    transition: all 1s ease-in;
+}
+#light-mode {
+    width: 24px;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+    transition: all 1s ease-out;
+}
+body {
+    background-color: var(--white);
+}
+.dark-theme{
+    --black: #FFFFFF;
+    --white: #000000;
+}
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --grey: #A6A79F;
+    --btnTxt: #FEFEFE;
+    --helper: #DF580C;
+    --primaryBtn: linear-gradient(90deg, #DF580C 0%, #FD993D 100%);
+    --secondaryBtn: linear-gradient(90deg, #434343 0%, #000000 100%);
+    --helloBg: linear-gradient(90deg, #32F6F6 0%, #A6A79F 100%);
+    --radius: 50px 50px 50px 0px;
+    --shadow: 0px 10px 25px 0px #00000040;
+}
+
+html {
+    font-size: 62.5%;
+    /* i.e 1 rem = 10px */
+}
+
+h1 {
+    color: var(--black);
+}
+
+h1>span {
+    color: var(--grey);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black)
+}
+
+/* ====== Reusable Code ====== */
+
+.fs64 {
+    font-size: 6.4rem;
+}
+
+.fs20 {
+    font-size: 2rem;
+}
+
+.fwt700 {
+    font-weight: 700;
+}
+
+.fwt600 {
+    font-weight: 600;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.section {
+    padding: 9rem 0;
+    background-color: var(--white);
+    z-index: -2;
+}
+
+.grid {
+    display: grid;
+    gap: 9rem;
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ====== Reusable Code End ====== */
+
+/* ====== Header Section ====== */
+/* ====== Navbar Section ====== */
+
+.line {
+    border: 3px solid var(--black);
+    height: 1px;
+    width: 16rem;
+    border-radius: 3px;
+    transform: rotate(-2deg);
+    position: absolute;
+    top: 25.5rem;
+    left: 23rem;
+}
+
+.header {
+    padding: 0 4.8rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    justify-content: space-between;
+    background-color: var(--white);
+    z-index: 99;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+}
+
+.navbar-lists {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    transition: color 0.3s linear;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: var(--helper);
+}
+
+/* ====== Navbar Section End ====== */
+/* ====== Header Section End ==== */
+
+/* ====== Hero Section ====== */
+
+/* .hero-section {
+    background-color: aliceblue;
+} */
+
+.hero-section-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+}
+
+/* Left Data */
+
+.afBorder {
+    border-bottom: 3px solid var(--white);
+}
+
+.top-hello-txt {
+    height: 72px;
+    width: 197px;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    font-size: 3.6rem;
+    color: white; 
+    border-radius: var(--radius);
+    background: var(--helloBg);
+}
+
+.hero-para {
+    font-weight: 300;
+    font-size: 3rem;
+    max-width: 60rem;
+    color: var(--black);
+}
+
+.hero-btns {
+    margin-top: 10rem;
+    gap: 3rem;
+}
+
+button {
+    width: 175px;
+    height: 60px;
+    color: var(--btnTxt);
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: 3px solid var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-primary {
+    background: var(--primaryBtn);
+}
+
+.btn-secondary {
+    background: var(--secondaryBtn);
+}
+
+.btn-primary:hover {
+    background: var(--helloBg);
+    transform: scale(1.05);
+}
+
+.btn-secondary:hover {
+    background: var(--helloBg);
+    transform: scale(1.05);
+}
+
+/* Left Data End*/
+
+/* Image */
+.hero-section-image {
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-img {
+    max-width: 50%;
+}
+
+/* blob */
+.blob-svg {
+    position: absolute;
+    width: 1000px;
+    height: auto;
+    fill: rgb(255, 229, 79);
+    top: 11px;
+    left: 542px;
+    z-index: -1;
+    transform: rotate(7deg);
+}
+
+.hero-img {
+    max-width: 70%;
+}
+
+
+/* Image End */
+
+/* ====== Hero Section End ====== */
+
+/* ====== About Section End ====== */
+
+.heading {
+    margin-bottom: 3rem;
+}
+
+.headingT {
+    font-size: 6.4rem;
+    font-weight: 600;
+}
+
+.para-text h3 {
+    font-size: 3.6rem;
+}
+
+.para-text {
+    /* background-color: #434343; */
+    max-width: 110rem;
+}
+
+.para-text p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: justify;
+    color: var(--black);
+}
+
+.para-text span {
+    font-weight: 400;
+}
+
+
+.section-hero {
+    position: relative;
+}
+
+.hand-img {
+    position: absolute;
+    top: 27rem;
+    left: 14%;
+    transform: translateX(-50%);
+}
+
+.para-text {
+    padding-top: 150px;
+}
+
+/* Vectors */
+
+.vector1 {
+    position: absolute;
+    bottom: 0;
+    left: -18%;
+    transform: translateY(-20%);
+    z-index: -1;
+}
+
+.vector3 {
+    position: absolute;
+    width: 238px;
+    height: auto;
+    top: 457px;
+    left: 1229px;
+    transform: rotate(0);
+}
+
+
+.vector4 {
+    width: 250px;
+    height: 250px;
+    top: 675px;
+    left: 425px;
+    /* angle: -28 deg; */
+
+}
+
+.vector5 {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    top: 825px;
+    left: 877px;
+}
+
+/* ====== About Section End ====== */
+
+/* ====== Footer Section ====== */
+
+.social-links {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 3.6rem;
+    height: 321px;
+    left: 4.8rem;
+    top: 475px;
+}
+
+.social-icon {
+    margin-bottom: 15px;
+    color: var(--black);
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--helper);
+}
+
+.email {
+    position: fixed;
+    width: 3.6rem;
+    left: 144.8rem;
+    top: 670px;
+    transform: rotate(-90deg);
+    font-size: 1.5rem;
+    border-left: 3px solid var(--black);
+    color: var(--black);
+}
+
+/* ====== Footer Section End====== */

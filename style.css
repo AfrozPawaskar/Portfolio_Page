@@ -16,7 +16,7 @@
 #light-mode {
     width: 24px;
     cursor: pointer;
-    color: var(--black);
+    color: var(--sun);
     display: none;
     transition: all 1s ease-out;
 }
@@ -34,6 +34,7 @@ body {
     --grey: #A6A79F;
     --btnTxt: #FEFEFE;
     --helper: #DF580C;
+    --sun: rgb(245, 237, 5);
     --primaryBtn: linear-gradient(90deg, #DF580C 0%, #FD993D 100%);
     --secondaryBtn: linear-gradient(90deg, #434343 0%, #000000 100%);
     --helloBg: linear-gradient(90deg, #32F6F6 0%, #A6A79F 100%);
